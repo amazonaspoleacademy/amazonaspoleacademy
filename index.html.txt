@@ -1,0 +1,181 @@
+<!-- Full HTML with all interactive buttons and responsive layout -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazonas Pole Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      width: 150px;
+      margin-bottom: 0.5rem;
+    }
+    .brand-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #000;
+      margin: 0.5rem 0;
+    }
+    nav {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .banner-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .toggle-button {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      margin: 1rem auto;
+      border: 2px solid #000;
+      cursor: pointer;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      display: block;
+    }
+    .precio-img, .horario-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin: 1rem auto;
+      display: none;
+      cursor: pointer;
+    }
+    .btn-whatsapp-inside {
+      display: none;
+      padding: 12px 24px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      border: 2px solid #000;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    .btn-whatsapp-inside.active {
+      display: inline-block;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      border: 2px solid #000;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 100%;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f0f0f0;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .brand-title {
+        font-size: 2rem;
+      }
+      .btn-whatsapp, .toggle-button, .btn-whatsapp-inside {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .brand-title {
+        font-size: 1.6rem;
+      }
+      .section h2 {
+        font-size: 1.5rem;
+      }
+      .btn-whatsapp, .toggle-button, .btn-whatsapp-inside {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+      }
+    }
+    .class-description {
+      display: none;
+      text-align: left;
+      margin-top: 1rem;
+    }
+    .highlight-link {
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function toggleImage(id) {
+      const img = document.getElementById(id);
+      const btn = document.getElementById("btn-" + id);
+      if (!img || !btn) return;
+      const visible = img.style.display === 'block';
+      img.style.display = visible ? 'none' : 'block';
+      btn.classList.toggle("active", !visible);
+    }
+
+    function toggleClassDescription(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.style.display = element.style.display === 'block' ? 'none' : 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- ...contenido igual, no modificado a partir de aquí... -->
