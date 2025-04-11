@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazonas Pole Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #fff; color: #111; line-height: 1.6; }
+    header { background: #fff; color: #000; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    header h1 { font-weight: 600; letter-spacing: 2px; margin-top: 10px; }
+    nav { margin-top: 10px; }
+    nav a { color: #000; margin: 0 15px; text-decoration: none; font-weight: 300; }
+    section { padding: 60px 20px; max-width: 900px; margin: auto; text-align: center; }
+    .hero { background: #000; color: #fff; padding: 100px 20px; }
+    .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .hero p { font-size: 1.2em; }
+    h2.section-title { font-size: 2em; margin-bottom: 20px; font-weight: 600; }
+    .classes ul { list-style: none; padding: 0; }
+    .classes li, #nosotras ul li { margin: 10px 0; font-size: 1.1em; cursor: pointer; color: #000; font-weight: 600; }
+    .description { display: none; font-weight: 300; font-size: 0.95em; margin: 10px 0 20px; }
+    .contact a { display: block; color: #000; margin: 8px 0; text-decoration: none; font-weight: 500; }
+    .linktree-buttons a {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 20px;
+      border: 2px solid #000;
+      color: #000;
+      text-decoration: none;
+      width: 80%;
+      max-width: 300px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .linktree-buttons a:hover {
+      background: #000;
+      color: #fff;
+    }
+    .linktree-buttons a i {
+      margin-right: 10px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5b;
+    }
+    .map-img, .studio-img, .price-img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    footer { background: #000; color: #fff; text-align: center; padding: 30px 20px; margin-top: 60px; }
+    footer .social-icons i {
+      margin: 0 10px;
+      font-size: 1.2em;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    footer .social-icons i:hover {
+      color: #999;
+    }
+    @media (max-width: 600px) {
+      nav a { display: block; margin: 10px 0; }
+    }
+    .logo {
+      width: 130px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    #calendar, #price-img, #price-img2 {
+      display: none;
+      margin-top: 20px;
+    }
+    #calendar table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+    }
+    #calendar th, #calendar td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #calendar th {
+      background: #f0f0f0;
+    }
+    .price-section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .price-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Amazonas Pole Academy" class="logo" />
+    <h1>Amazonas Pole Academy</h1>
+    <nav>
+      <a href="#nosotras">Sobre Nosotras</a>
+      <a href="#redes">Redes</a>
+      <a href="#precios">Precios</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Empoderate bailando</h2>
+    <p>Clases de Pole Dance, Exotic y Flexibilidad en Buenos Aires</p>
+  </section>
+
+  <section id="redes">
+    <h2 class="section-title">Nuestras Redes</h2>
+    <div class="linktree-buttons">
+      <a href="https://www.instagram.com/amazonaspoleacademy" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.tiktok.com/@amazonaspoleacademy" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="https://wa.me/5491126106002" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="precios">
+    <h2 class="section-title">Planes y Precios</h2>
+    <div class="price-section" id="priceImages">
+      <img src="planes-y-precios-1.jpg" alt="Precios Clases Grupos" />
+      <img src="planes-y-precios-2.jpg" alt="Otros Servicios" />
+      <a href="https://wa.me/5491126106002" class="whatsapp-btn" target="_blank">Reservar vía WhatsApp</a>
+    </div>
+    <a href="#" class="linktree-buttons" onclick="document.getElementById('priceImages').style.display='flex'; return false;">Ver Precios</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amazonas Pole Academy</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/amazonaspoleacademy" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@amazonaspoleacademy" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:amazonaspoleacademy@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
